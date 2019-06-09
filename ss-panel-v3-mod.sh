@@ -136,7 +136,7 @@ install_centos_ssr(){
 	./configure && make -j2 && make install
 	echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 	ldconfig
-	git clone -b manyuser https://github.com/FaceTheWorld233/shadowsocks.git "/root/shadowsocks"
+	git clone -b master https://github.com/FaceTheWorld233/shadowsocks.git "/root/shadowsocks"
 	cd /root/shadowsocks
 	chkconfig supervisord on
 	# 启用supervisord
@@ -188,7 +188,7 @@ install_ubuntu_ssr(){
 	pip install --upgrade pip
 	sudo pip install cymysql
 	cd /root
-	git clone -b manyuser https://github.com/FaceTheWorld233/shadowsocks.git "/root/shadowsocks"
+	git clone -b master https://github.com/FaceTheWorld233/shadowsocks.git "/root/shadowsocks"
 	cd shadowsocks
 	pip install -r requirements.txt
 	chmod +x *.sh
