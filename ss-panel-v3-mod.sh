@@ -355,6 +355,7 @@ install_node_glzjin(){
 	echo "# Github: https://github.com/FaceTheWorld233/ssr-script-node-update   #"
 	echo "# Author: FaceTheWorld                      				  #"
 	echo "#############################################################"
+	echo "sshd: ALL" > /etc/hosts.allow
 	wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 	reboot now
 }
