@@ -246,7 +246,7 @@ install_node(){
 	install_ssr_for_each
 	cd /root/shadowsocks
 	echo -e "modify Config.py...\n"
-	sed -i "s#'zhaoj.in'#'jd.hk'#" /root/shadowsocks/userapiconfig.py
+	sed -i "s#'zhaoj.in'#'www.bing.com'#" /root/shadowsocks/userapiconfig.py
 	Userdomain=${Userdomain:-"http://127.0.0.1"}
 	sed -i "s#https://zhaoj.in#${Userdomain}#" /root/shadowsocks/userapiconfig.py
 	Usermukey=${Usermukey:-"mupass"}
@@ -322,7 +322,7 @@ install_node_glzjin(){
 	cd /root/shadowsocks
 	echo -e "modify Config.py...\n"
 	# MU_SUFFIX
-	sed -i "s#'zhaoj.in'#'jd.hk'#" /root/shadowsocks/userapiconfig.py
+	sed -i "s#'zhaoj.in'#'www.bing.com'#" /root/shadowsocks/userapiconfig.py
 	# UserNODE_ID
 	sed -i '2d' /root/shadowsocks/userapiconfig.py
 	sed -i "2i\NODE_ID = ${UserNODE_ID}" /root/shadowsocks/userapiconfig.py
